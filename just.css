@@ -1,0 +1,111 @@
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 25px;
+    background-color: #1a1f28; /* Darker background for contrast */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for the header */
+}
+
+/* Logo */
+header .logo img {
+    width: 55px;
+    height: auto;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out; /* Smooth logo hover effect */
+}
+
+header .logo img:hover {
+    transform: rotate(360deg); /* Rotate the logo on hover */
+}
+
+/* Navigation Links */
+header ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+}
+
+/* Styling each list item (buttons) */
+header ul li {
+    position: relative;
+}
+
+/* Default link style */
+header ul li a {
+    text-decoration: none;
+    color: #0c0804; /* Bright orange for links */
+    padding: 12px 20px;
+    font-size: 18px;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+    display: inline-block;
+    border-radius: 8px; /* Rounded corners */
+}
+
+/* Hover and Focus Effects */
+header ul li a:hover {
+    background-color: whitesmoke; /* Bright orange background on hover */
+    color: #fff; /* White text on hover */
+    box-shadow: 0 4px 12px rgba(255, 111, 0, 0.4); /* Box-shadow effect */
+    transform: translateY(-4px); /* Slight lift effect */
+}
+
+/* Active Link (Currently selected) */
+header ul li a.active {
+    color: #fff;
+    background-color: #00c9ff; /* Pink background for active link */
+    border-bottom: 3px solid #00c9ff; /* Underline with color */
+    box-shadow: 0 4px 10px rgba(63, 203, 253, 0.4); /* Active box-shadow */
+}
+
+/* Specific styling for Home and About */
+header ul li a.home {
+    text-transform: uppercase; /* Uppercase text */
+    font-weight: 600; /* Bold for emphasis */
+    letter-spacing: 2px; /* Increased letter spacing */
+}
+
+header ul li a.about {
+    font-style: italic; /* Italic for differentiation */
+    letter-spacing: 1.5px; /* Slight letter-spacing */
+}
+
+/* Hover Effects for Home and About */
+header ul li a.home:hover,
+header ul li a.about:hover {
+    background-color: #00c9ff; /* Hover color change */
+    box-shadow: 0 4px 15px rgba(255, 64, 129, 0.3); /* Box-shadow on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Focused state for better accessibility */
+header ul li a:focus {
+    outline: 3px solid #ff9b42; /* Bright outline for focus */
+}
+
+/* Adding subtle animations */
+header ul li a {
+    animation: fadeIn 0.6s ease-out;
+}
+header nav ul li a:hover i {
+    color: black; /* Icon color changes to black on hover */
+}
+
+/* Animation for fading in links */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
